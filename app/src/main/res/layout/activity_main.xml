@@ -10,12 +10,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_margin="@dimen/d10"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/etNombre"
@@ -31,7 +32,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Apellidos"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorLink="@color/Black" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -54,13 +56,15 @@
                         android:id="@+id/tvEdad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Edad: " />
+                        android:layout_marginTop="@dimen/d5"
+                        android:text="Edad: "
+                        />
 
                     <EditText
                         android:id="@+id/etEdad"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:layout_height="@dimen/d35"
+                        android:ems="3"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -69,12 +73,15 @@
                     android:id="@+id/lyProvincias"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d20"
+                    android:layout_marginRight="@dimen/d40"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tvProvincia"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
                         android:text="Provincia: " />
 
                     <Spinner
@@ -86,6 +93,7 @@
 
             <TextView
                 android:id="@+id/tvEstadoCivil"
+                style="@style/MarginTopBottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Estado Civil: " />
@@ -127,133 +135,155 @@
 
             <CheckBox
                 android:id="@+id/cbTerminos"
+                style="@style/MarginTopBottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Acepto los Términos" />
+                android:text="Acepto los Términos"
+                android:layout_marginTop="@dimen/d20"/>
 
             <LinearLayout
                 android:id="@+id/lyBotones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="@dimen/d15">
 
                 <Button
                     android:id="@+id/btnAceptar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="Aceptar"
+                    android:layout_marginRight="@dimen/d20"
+                    android:shadowColor="#050505"
+                    android:shadowDx="4"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/d20"
+                    android:background="@drawable/selector_boton"/>
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/d60"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     app:srcCompat="@mipmap/delete" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/ly_tvNombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Nombre: " />
-
-                <TextView
-                    android:id="@+id/tvNombre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ly_tvApellidos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Apellidos: " />
-
-                <TextView
-                    android:id="@+id/tvApellidos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ly_tvEdad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Edad: " />
-
-                <TextView
-                    android:id="@+id/tvRespEdad"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Provincia: " />
-
-                <TextView
-                    android:id="@+id/tvRespProvincia"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                     />
-
-                <TextView
-                    android:id="@+id/TextView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
-
-                <TextView
-                    android:id="@+id/tvRespEstadoCivil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/ivBack"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/back" />
-
-                <ImageView
-                    android:id="@+id/ivNext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/next" />
-            </RelativeLayout>
-
         </LinearLayout>
     </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/d5"
+        android:background="@drawable/fondo_relative"
+        android:padding="@dimen/d5"
+        >
+
+        <LinearLayout
+            android:id="@+id/ly_tvNombre"
+            style="@style/MarginTopBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="@dimen/d80"
+                android:layout_height="wrap_content"
+                android:text="Nombre: " />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="@dimen/d160"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="@dimen/d50"
+                android:layout_height="wrap_content"
+                android:text="Edad: " />
+
+            <TextView
+                android:id="@+id/tvRespEdad"
+                android:layout_width="@dimen/d60"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_tvApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ly_tvNombre">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="@dimen/d80"
+                android:layout_height="wrap_content"
+                android:text="Apellidos: " />
+
+            <TextView
+                android:id="@+id/tvApellidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_tvEdad"
+            style="@style/MarginTopBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ly_tvApellidos">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="@dimen/d70"
+                android:layout_height="wrap_content"
+                android:text="Provincia: " />
+
+            <TextView
+                android:id="@+id/tvRespProvincia"
+                android:layout_width="@dimen/d125"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/TextView11"
+                android:layout_width="@dimen/d80"
+                android:layout_height="wrap_content"
+                android:text="Estado Civil: " />
+
+            <TextView
+                android:id="@+id/tvRespEstadoCivil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/d10"
+            app:srcCompat="@mipmap/back" />
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:foregroundGravity="bottom|right"
+            android:layout_marginRight="@dimen/d10"
+            app:srcCompat="@mipmap/next"
+            />
+    </RelativeLayout>
 </LinearLayout>

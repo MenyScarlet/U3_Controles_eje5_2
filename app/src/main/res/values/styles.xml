@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MarginTopBottom">
+        <item name="android:layout_marginTop">@dimen/d5</item>
+        <item name="android:layout_marginBottom">@dimen/d5</item>
+    </style>
+
+
+
 </resources>
