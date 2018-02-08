@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
         cbTerminos = (CheckBox)findViewById(R.id.cbTerminos);
 
         String[] provincias =
-                {"Cádiz", "Sevilla","Huelva","Málaga", "Córdoba","Granada","Jaén", "Almeria"};
+                {"Selecciona", "Cádiz", "Sevilla","Huelva","Málaga", "Córdoba","Granada","Jaén", "Almeria"};
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,
-                android.R.layout.simple_expandable_list_item_1, provincias);
+                R.layout.item_spinner, provincias);
         spProvincia.setAdapter(adaptador);
 
 

@@ -13,6 +13,13 @@
         <item name="android:layout_marginBottom">@dimen/d5</item>
     </style>
 
+    <style name="estiloLetras">
+        <item name = "android:textColor">@color/Black</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textSize">@dimen/d15</item>
+
+    </style>
+
 
 
 </resources>
