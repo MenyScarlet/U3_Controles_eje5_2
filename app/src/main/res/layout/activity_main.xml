@@ -161,7 +161,7 @@
                     android:padding="@dimen/d10">
 
                     <Button
-                        android:id="@+id/btnAceptar"
+                        android:id="@+id/btnGuardar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/d20"
@@ -171,7 +171,7 @@
                         android:shadowDx="4"
                         android:shadowDy="0"
                         android:shadowRadius="5"
-                        android:text="Aceptar"
+                        android:text="Guardar"
                         android:textColor="@color/white"
                         android:textSize="@dimen/d20"
                         android:textStyle="bold" />
@@ -294,21 +294,23 @@
 
         <ImageView
             android:id="@+id/ivBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/d40"
+            android:layout_height="@dimen/d40"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom|right|end"
             android:baselineAlignBottom="true"
             android:foregroundGravity="bottom|right"
-            app:srcCompat="@mipmap/back" />
+
+            android:background="@drawable/selector_back"/>
 
         <ImageView
             android:id="@+id/ivNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/d40"
+            android:layout_height="@dimen/d40"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            app:srcCompat="@mipmap/next" />
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_next"/>
     </RelativeLayout>
 
 </LinearLayout>
